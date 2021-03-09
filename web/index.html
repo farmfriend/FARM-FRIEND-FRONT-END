@@ -50,16 +50,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<nav>
 						<ul class="nav navbar-nav link-effect-5" id="link-effect-5">
 							<li class="active"><a href="index.html" data-hover="Home">Home</a></li>
-							<li><a href="services.html" data-hover="Services">Services</a></li>
-							<li><a href="gallery.html" data-hover="Gallery">Gallery</a></li>
 							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="Short Codes">Short Codes <b class="caret"></b></a>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="Services">Services <b class="caret"></b></a>
 								<ul class="dropdown-menu agile_short_dropdown">
 									<li><a href="icons.html">Icons</a></li>
 									<li><a href="typography.html">Typography</a></li>
 								</ul>
 							</li>
-							<li><a href="mail.html" data-hover="Mail Us">Mail Us</a></li>
+							<li><a href="gallery.html" data-hover="Gallery">Gallery</a></li>
+							<li id="login_div"><a onclick="log()" data-hover="LOGIN">LOGIN</a></li>
+							<li><p></p></li>
+							<li id="user_div">
+							<a onclick="logout()">Logout</a>
+<li id="para_div">
+	<p id="user_para">
+		</p>
+
+	</li>
+
+								</li>
 						</ul>
 						<div class="w3_social_icons">
 							<ul class="w3layouts_social">
@@ -434,6 +443,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 			});
 	</script>
-<!-- //here ends scrolling icon -->
+	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyCRZqb0LWIw_iCs68wwvpB8-qPXjtJJFeI",
+    authDomain: "farm-friend-3e272.firebaseapp.com",
+    projectId: "farm-friend-3e272",
+    storageBucket: "farm-friend-3e272.appspot.com",
+    messagingSenderId: "784795670894",
+    appId: "1:784795670894:web:92b3af7eac4e9865df497f",
+    measurementId: "G-82GWHGKE1V"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+  <script src="index.js"></script>
 </body>
 </html>
