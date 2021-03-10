@@ -5,6 +5,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     document.getElementById("user_div").style.display = "block";
     document.getElementById("login_div").style.display = "none";
     document.getElementById("para_div").style.display = "block";
+
     var user = firebase.auth().currentUser;
 
     if(user != null){
@@ -20,11 +21,13 @@ firebase.auth().onAuthStateChanged(function(user) {
     document.getElementById("user_div").style.display = "none";
     document.getElementById("login_div").style.display = "block";
     document.getElementById("para_div").style.display = "none";
+  
   }
 });
 function log(){
   window.open("login.html","","toolbar=no,status=no,menubar=no,location=center,scrollbars=no,resizable=no,height=500,width=657");
 }
+
 function logout(){
     firebase.auth().signOut();
 }
