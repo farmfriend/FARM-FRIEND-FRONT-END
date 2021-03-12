@@ -11,13 +11,13 @@ firebase.auth().onAuthStateChanged(function(user) {
 }).then(function() {
   window.alert("Signup Succesful. Now redirecting");
   firebase.auth().signOut();
-  window.location.replace("index.html");
+  window.location.replace("login.html");
 
 }).catch(function(error) {
   window.alert("Error:- "+error.message);
 });
-      
-      
+
+
 
     }
 
@@ -33,7 +33,7 @@ function signup() {
   // [START auth_signup_password]
   firebase.auth().createUserWithEmailAndPassword(userEmail, userPass)
     .then((userCredential) => {
-      // Signed in 
+      // Signed in
       var user = userCredential.user;
       // ...
     })
