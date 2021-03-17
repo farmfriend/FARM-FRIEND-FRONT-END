@@ -26,7 +26,10 @@ body{
 .panel-footer {
   border-top: 0;
 }
-
+#choose{
+  display: flex;
+  justify-content: center;
+}
 .panel-default > .panel-heading {
     color: #333333;
     background-color: transparent;
