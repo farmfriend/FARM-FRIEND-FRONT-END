@@ -81,13 +81,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="container bootstrap snippets bootdeys">
 	<div class="row">
 	  <div class="col-xs-12 col-sm-9">
-	    <form class="form-horizontal">
+	    <div class="form-group">
 	        <div class="panel panel-default">
 	          <div class="panel-body text-center">
 
-						 <img src="https://instagram.famd1-3.fna.fbcdn.net/v/t51.2885-19/s320x320/66515749_429106304368269_3486489541328502784_n.jpg?tp=1&_nc_ht=instagram.famd1-3.fna.fbcdn.net&_nc_ohc=J7h5wXYqFSQAX_1Y5Vr&oh=e379782a715763813da881be13e95095&oe=607B26AB" class="img-circle profile-avatar" alt="User avatar" id="myImg">
+						 <img src="https://i.stack.imgur.com/l60Hf.png" class="img-circle profile-avatar" alt="User avatar" id="myImg">
 
-						  <input id="choose" type="file" id="photo" />
+						  <input type="file" id="photo" />
 
 					  </div>
 	        </div>
@@ -99,8 +99,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	          <div class="form-group">
 	            <label class="col-sm-2 control-label">Location</label>
 	            <div class="col-sm-10">
-	              <select class="form-control">
-	                <option selected="">Select country</option>
+	              <select class="form-control" id="State">
+	                <option selected="">Select state</option>
 	                <option value="Andhra Pradesh">Andhra Pradesh</option>
 					<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
 					<option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -141,15 +141,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	            </div>
 	          </div>
 	          <div class="form-group">
-	            <label class="col-sm-2 control-label">Company name</label>
+	            <label class="col-sm-2 control-label">District</label>
 	            <div class="col-sm-10">
-	              <input type="text" class="form-control">
+	              <input type="text" class="form-control" id="District">
 	            </div>
 	          </div>
 	          <div class="form-group">
-	            <label class="col-sm-2 control-label">Position</label>
+	            <label class="col-sm-2 control-label">City / Village</label>
 	            <div class="col-sm-10">
-	              <input type="text" class="form-control">
+	              <input type="text" class="form-control" id="CityVIll">
+	            </div>
+	          </div>
+			  <div class="form-group">
+	            <label class="col-sm-2 control-label">Address</label>
+	            <div class="col-sm-10">
+	              <input type="text" class="form-control" id="Addr">
 	            </div>
 	          </div>
 	        </div>
@@ -160,71 +166,33 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	        <h4 class="panel-title">Contact info</h4>
 	        </div>
 	        <div class="panel-body">
+	          
+	          
 	          <div class="form-group">
-	            <label class="col-sm-2 control-label">Work number</label>
+	            <label class="col-sm-2 control-label">Mobile Number</label>
 	            <div class="col-sm-10">
-	              <input type="tel" class="form-control">
+	              <input type="text" class="form-control" id="Phone">
 	            </div>
 	          </div>
-	          <div class="form-group">
-	            <label class="col-sm-2 control-label">Mobile number</label>
-	            <div class="col-sm-10">
-	              <input type="tel" class="form-control">
-	            </div>
-	          </div>
-	          <div class="form-group">
-	            <label class="col-sm-2 control-label">E-mail address</label>
-	            <div class="col-sm-10">
-	              <input type="email" class="form-control">
-	            </div>
-	          </div>
-	          <div class="form-group">
-	            <label class="col-sm-2 control-label">Work address</label>
-	            <div class="col-sm-10">
-	              <textarea rows="3" class="form-control"></textarea>
-	            </div>
-	          </div>
+	          
 	        </div>
 	      </div>
 
-	      <div class="panel panel-default">
-	        <div class="panel-heading">
-	        <h4 class="panel-title">Security</h4>
-	        </div>
-	        <div class="panel-body">
-	          <div class="form-group">
-	            <label class="col-sm-2 control-label">Current password</label>
-	            <div class="col-sm-10">
-	              <input type="password" class="form-control">
-	            </div>
-	          </div>
-	          <div class="form-group">
-	            <label class="col-sm-2 control-label">New password</label>
-	            <div class="col-sm-10">
-	              <input type="password" class="form-control">
-	            </div>
-	          </div>
+	      
+	        
 	          <div class="form-group">
 	            <div class="col-sm-10 col-sm-offset-2">
-	              <div class="checkbox">
-	                <input type="checkbox" id="checkbox_1">
-	                <label for="checkbox_1">Make this account public</label>
-	              </div>
-	            </div>
-	          </div>
-	          <div class="form-group">
-	            <div class="col-sm-10 col-sm-offset-2">
-	              <button type="submit" class="btn btn-primary">Submit</button>
-	              <button type="reset" class="btn btn-default">Cancel</button>
+	              <button onclick="updateData()" class="btn btn-primary">Submit</button>
+	              <button type="reset" class="btn btn-default" id="value">Cancel</button>
 	            </div>
 	          </div>
 	        </div>
 	      </div>
-	    </form>
+	    
 	  </div>
 	</div>
 	</div>
-
+</div>
 <!-- footer -->
 	<div class="footer">
 		<div class="container">
@@ -245,7 +213,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="col-md-5 w3_footer_grid">
 				<h3>Newsletter</h3>
-				<form action="#" method="post">
+				<form action="#" method="post"></form>
 					<input type="email" name="email" placeholder="Your email..." required="">
 					<input type="submit" value=" ">
 				</form>
