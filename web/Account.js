@@ -31,13 +31,13 @@ firebase.auth().onAuthStateChanged(function(user) {
         				window.alert('Upload Photo');
         			});
 					var database = firebase.database();
-					
+
 					var starCountRef = firebase.database().ref('users/' + user_id+'/State');
 					starCountRef.on('value', (snapshot) => {
 						const data = snapshot.val();
 						document.getElementById("State").value = data;
 						console.log(data);
-					  });	
+					  });
 					  var starCountRef = firebase.database().ref('users/' + user_id+'/District');
 					starCountRef.on('value', (snapshot) => {
 						const data = snapshot.val();
@@ -59,7 +59,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 					  var starCountRef = firebase.database().ref('users/' + user_id+'/Mobile');
 					  starCountRef.on('value', (snapshot) => {
 						  const data = snapshot.val();
-						  document.getElementById("Pnone").value = data;
+						  document.getElementById("Phone").value = data;
 						  console.log(data);
 						});
           var fileButton = document.getElementById('photo');
@@ -67,9 +67,9 @@ firebase.auth().onAuthStateChanged(function(user) {
      	 var file = e.target.files[0];
      	 var storageRef = firebase.storage().ref(user_id+'.jpeg');
      	 var task = storageRef.put(file);
-       
+
       });
-	  
+
     }
 
   } else {
@@ -84,8 +84,8 @@ function updateData() {
 	var city = document.getElementById("CityVIll").value;
 	var addr = document.getElementById("Addr").value;
 	var mob = document.getElementById("Phone").value;
-	
-	
+
+
 	var user = firebase.auth().currentUser;
     var userId = user.uid;
 	firebase.database().ref('users/' + userId).set({
