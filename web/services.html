@@ -28,7 +28,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="//fonts.googleapis.com/css?family=Alegreya:400,400i,700,700i,900,900i&subset=latin-ext" rel="stylesheet">
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 </head>
-
+<style>
+	.img_att{
+		width: 130px;
+		height: 100px;
+	}
+	.img_att2{
+		width: 30px;
+		height: 30px;
+	}
+</style>
 <body>
 <!-- banner -->
 	<div class="banner1">
@@ -92,32 +101,62 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="w3layouts_vertical_tab">
 							<div class="col-md-7 w3layouts_vertical_tab">
 					<div >
-						<input type="email" placeholder="Email..." id="email_field" / required>
-				    <input type="password" placeholder="Password..." id="password_field" / required>
-				    <button onclick="test()">Login to Account</button>
+						<label>Select Crops: </label>
+						<div>
+							<input type="file" id="files" name="files" onchange="loadFile(event)" multiple><br><br>
+  							
+							
+						</div>
+						<div id="new">
+
+						</div>
+				  <label>Crops:-</label>
+	              <select id="crops"> 
+	                <option value="गेहूं">गेहूं</option>
+					<option value="धान">धान</option>
+					<option value="बाजरा"> बाजरा</option>
+					<option value="जौ"> जौ</option>
+					<option value="ज्वार"> ज्वार</option>
+					<option value="रागी"> रागी</option>
+					<option value="मक्का"> मक्का</option>
+					<option value="अरहर"> अरहर</option>
+					<option value="चना"> चना</option>
+					<option value="उड़द"> उड़द</option>
+					<option value="मूंग"> मूंग</option>
+					<option value="मसूर"> मसूर</option>
+					<option value="सरसों"> सरसों</option>
+					<option value="मूंगफली"> मूंगफली</option>
+					<option value="सोयाबीन"> सोयाबीन</option>
+					<option value="तोरिया"> तोरिया</option>
+					<option value="तिल"> तिल</option>
+					<option value="केसर"> केसर</option>
+					<option value="बीज"> बीज</option>
+					<option value="सूरजमुखी के बीज"> सूरजमुखी के बीज</option>
+					<option value="रामतिल"> रामतिल</option>
+	              </select>
+		
 					</div>
+					<br>
+					<div>
+						<label>Quantity:</label>
+						<div class="col-sm-10">
+						  <input type="text" class="form-control" id="quantity">
+						</div>
+					  </div>
+					  <br>
+					<div>
+						<label>Total Price:</label>
+						
+						  <input type="text" class="form-control" id="price">
+						<button id="post_order" onclick="post_order()">Post Order</button>
+					  </div>
 
 							</div>
-							<div class="col-md-5 w3layouts_vertical_tab_right">
-								<img src="images/6.jpg" alt=" " class="img-responsive" />
-							</div>
+							
 							<div class="clearfix"> </div>
 						</div>
-						<div class="w3layouts_vertical_tab">
-							<div class="col-md-7 w3layouts_vertical_tab">
-								<p>Proin id arcu odio. Proin tincidunt ante lacus, at commodo felis
-									aliquam eu. Praesent ut turpis venenatis, aliquam mauris tempus, lobortis
-									nunc. Pellentesque maximus ipsum turpis, sed blandit diam placerat ac.
-									Proin in mi ut nulla lacinia facilisis. Nullam semper sapien eget viverra
-									iaculis. Integer quis vestibulum lacus, imperdiet pellentesque libero.
-									<i>Cras feugiat dui augue, in malesuada sem porta id. Mauris tempor
-										aliquam risus eget sagittis. Nulla eu imperdiet mauris. Morbi ornare
-										ac elit luctus vestibulum.</i></p>
-							</div>
-							<div class="col-md-5 w3layouts_vertical_tab_right">
-								<img src="images/8.jpg" alt=" " class="img-responsive" />
-							</div>
-							<div class="clearfix"> </div>
+						<div class="w3layouts_vertical_tab" id="your_order">
+							
 						</div>
 						<div class="w3layouts_vertical_tab">
 							<div class="col-md-7 w3layouts_vertical_tab">

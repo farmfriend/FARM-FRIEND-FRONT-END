@@ -197,7 +197,7 @@ a.w3l_instagram:hover{
 /*-- //banner --*/
 /*-- banner-bottom --*/
 .banner-bottom{
-	padding:5em 0 0;
+	padding:5em 0 5em;
 }
 .w3layouts_banner_bottom_right h4{
 	text-transform: uppercase;
@@ -244,7 +244,7 @@ a.w3l_instagram:hover{
 	background:#212121;
 }
 .w3layouts_banner_bottom_right {
-    margin: 6em 0 0;
+    margin: 0em 0 0;
 }
 .link {
 	text-decoration: none;
@@ -1569,7 +1569,7 @@ p.agileinfo_para{
 		font-size: 2.5em;
 	}
 	.banner-bottom {
-		padding: 4em 0 0;
+		padding: 4em 0 4em;
 	}
 	.team, .testimonials, .services, .mail, .gallery, .w3_wthree_agileits_icons, .typo, .stats, .services-bottom, .featured-services {
 		padding: 4em 0;
@@ -1618,7 +1618,7 @@ p.agileinfo_para{
 		left: 44%;
 	}
 }
-@media (max-width: 991px){
+@media (max-width: 1091px){
 	.navbar-brand {
 		font-size: .8em;
 	}
@@ -1669,7 +1669,7 @@ p.agileinfo_para{
 	}
 	.agileinfo_team_grid {
 		float: left;
-		width: 33.33%;
+		width: 25%;
 	}
 	.w3_agileits_stats_grid {
 		float: left;
@@ -2014,7 +2014,7 @@ p.agileinfo_para{
 		width: 81%;
 	}
 }
-@media (max-width: 480px){
+@media (max-width: 600px){
 	.banner_info {
 		width: 90%;
 		padding: 1em;
@@ -2062,8 +2062,8 @@ p.agileinfo_para{
 		left: 37%;
 	}
 	.agileinfo_team_grid {
-		float: none;
-		width: 80%;
+		float: left;
+		width: 50%;
 		margin: 0 auto;
 	}
 	.agileinfo_team_grid:nth-child(2) {
@@ -2148,6 +2148,7 @@ p.agileinfo_para{
 		width: 90%;
 	}
 }
+
 @media (max-width: 414px){
 	.banner_info h3 {
 		font-size: 1.4em;
@@ -2162,7 +2163,9 @@ p.agileinfo_para{
 		top: -59%;
 	}
 	.agileinfo_team_grid {
-		width: 100%;
+		float: left;
+		width: 50%;
+		margin: 0 auto;
 	}
 	.w3ls_para:after {
 		width: 29.4%;

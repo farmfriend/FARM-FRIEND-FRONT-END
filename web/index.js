@@ -25,7 +25,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 function log(){
-  window.open("login.html","","toolbar=no,status=no,menubar=no,location=center,scrollbars=no,resizable=no,height=500,width=657");
+  window.open("login.html","","toolbar=no,status=no,menubar=no,location=center,scrollbars=no,resizable=no,width=657");
 }
 
 function logout(){
