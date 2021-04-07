@@ -28,6 +28,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         				img.setAttribute('src', url);
         			})
         			.catch((error) => {
+						img.setAttribute('src','https://i.stack.imgur.com/l60Hf.png');
         				window.alert('Upload Photo');
         			});
 					var database = firebase.database();
@@ -62,8 +63,10 @@ firebase.auth().onAuthStateChanged(function(user) {
 						  document.getElementById("Phone").value = data;
 						  console.log(data);
 						});
-          var fileButton = document.getElementById('photo');
-      fileButton.addEventListener('change', function(e){
+          
+				var fileButton = document.getElementById('photo');
+    
+		fileButton.addEventListener('change', function(e){
      	 var file = e.target.files[0];
      	 var storageRef = firebase.storage().ref(user_id+'.jpeg');
      	 var task = storageRef.put(file);
@@ -123,4 +126,7 @@ function updateData() {
 		Mobile: mob
 	  });
 	  window.alert(state+district+city+addr+mob);
+	}
+function logout(){
+		firebase.auth().signOut();
 	}
