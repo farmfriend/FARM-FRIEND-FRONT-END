@@ -4,7 +4,14 @@ firebase.auth().onAuthStateChanged(function(user) {
     var user = firebase.auth().currentUser.uid;
 
     if(user != null){
-     
+      var userId = user.uid;
+      var starCountRef = firebase.database().ref('users/' + userId+'/type');
+      starCountRef.once('value', (snapshot) => {
+        const data = snapshot.val();
+        if(data == 'Merchant'){window.alert("You are not a merchant : Redirecting you");
+        window.location.replace("merchent.html");
+      }
+
     }
   }
 }); 
