@@ -18,6 +18,9 @@ h1,h2,h3,h4,h5,h6{
 	font-family: 'Alegreya', serif;
 	margin:0;
 }
+#myTable, tr, td{
+	border: 2px solid red ;
+}
 ul,label{
 	margin:0;
 	padding:0;
